@@ -103,4 +103,4 @@ apeglm: Zhu A, Ibrahim JG, Love MI (2019). Bioinformatics 35:2084–2092.
 
 ## Contact
 
-[Jose Manuel Latorre Estivalis, IBBEA - CONICET UBA, jmlatorre@conicet.gov.ar]
+Jose Manuel Latorre Estivalis, IBBEA - CONICET UBA, jmlatorre@conicet.gov.ar
