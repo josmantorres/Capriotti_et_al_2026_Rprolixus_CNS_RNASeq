@@ -1,5 +1,5 @@
 # Capriotti_et_al_2026_Rprolixus_CNS_RNASeq
-This repository contains the code, count tables, and differential expression analysis for the RNA-Seq study investigating the transcriptional modulation in the nervous system of Rhodnius prolixus fifth-instar nymphs following a blood meal.
+This repository contains the code, experiment description, count tables, and differential expression analysis for the RNA-Seq study investigating the transcriptional modulation in the nervous system of Rhodnius prolixus fifth-instar nymphs following a blood meal.
 
 # Differential expression analysis: Fed vs Unfed
 
@@ -34,8 +34,9 @@ Gene-level counts generated with STAR (16,138 annotated genes) are analyzed with
 
 ## Requirements
 
-- R [version X]
-- R packages: `DESeq2` [version X], `apeglm` [version X], `pheatmap` [version X], `RColorBrewer` [version X]
+- R RStudio 2026.07.1+147 "Pacific Dogwood" Release (49299327da3b03a79e7aa615c2388bcd05a1261a, 2026-07-15) for Ubuntu Jammy
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) rstudio/2026.07.1+147 Chrome/146.0.7680.216 Electron/41.9.0 Safari/537.36, Quarto 1.9.38
+- R packages: `DESeq2` [1.42.1], `apeglm` [version 1.24], `pheatmap` [version 1.0.13], `RColorBrewer` [version 1.1-13]
 
 Exact versions used are recorded in `output/sessionInfo.txt` after running the script.
 
@@ -51,13 +52,13 @@ install.packages(c("pheatmap", "RColorBrewer"))
 
 Both files are tab-delimited with a header row.
 
-**`input/counts_table.txt`**: first column = gene IDs; remaining columns = raw (unnormalized) integer counts, one column per sample.
+**`input/Raw_count_table.txt`**: first column = gene IDs; remaining columns = raw (unnormalized) integer counts, one column per sample.
 
 | gene_id | sample1 | sample2 | ... |
 |---------|---------|---------|-----|
 | gene_A  | 120     | 98      | ... |
 
-**`input/sample_metadata.txt`**: one row per sample, in the same order as the count columns. Must contain a column named `treatment` with the values `Fed` and `Unfed`.
+**`input/Experiment_description.txt`**: one row per sample, in the same order as the count columns. Must contain a column named `treatment` with the values `Fed` and `Unfed`.
 
 ## Usage
 
