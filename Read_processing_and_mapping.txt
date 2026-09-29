@@ -1,0 +1,11 @@
+#1. Trimming
+
+java -jar trimmomatic-0.39.jar PE -threads 4 -phred33 sample_1.fq.gz sample_2.fq.gz trimmed/sample_1.paired.1.fastq.gz trimmed/sample_1.single.1.fastq.gz trimmed/sample_2.paired.2.fastq.gz trimmed/sample_2.single.2.fastq.gz TRAILING:5 LEADING:5 SLIDINGWINDOW:4:15 ILLUMINACLIP:adapters.fa:2:30:10 MINLEN:50 2> sample.trim.log
+
+#2. Indexing
+
+STAR --runMode genomeGenerate --genomeDir index/ --genomeFastaFiles GCF_049639745.1_Rpr_genomic.fna --runThreadN 8 --sjdbGTFfile file.gtf --genomeSAsparseD 5 --genomeSAindexNbases 13
+
+#3. Mapping
+
+STAR --runMode alignReads --runThreadN 12 --genomeDir index/ --readFilesIn sample_1.paired.1.fastq.gz sample_2.paired.2.fastq.gz --readFilesCommand gunzip -c --outFilterMultimapNmax 1 --quantMode GeneCounts --outSAMtype None --outFileNamePrefix sample
