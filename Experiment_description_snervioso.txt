@@ -1,0 +1,9 @@
+sample	treatment
+NS1	Unfed
+NS3	Unfed
+NS4	Unfed
+NS6	Unfed
+NA1	Fed
+NA3	Fed
+NA4	Fed
+NA6	Fed
