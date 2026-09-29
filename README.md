@@ -24,6 +24,7 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 
 ```
 .
+├── Read trimming code with Trimmomatic and mapping/counting code with STAR   # analysis script
 ├── Differential_expression_analysis.R   # analysis script
 ├── input/
 │   ├── Raw_count_table.txt                # raw counts (see format below)
