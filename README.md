@@ -1,7 +1,7 @@
 # Capriotti_et_al_2026_Rprolixus_CNS_RNASeq
 This repository contains the code, experiment description, count tables, and differential expression analysis for the RNA-Seq study investigating the transcriptional modulation in the nervous system of Rhodnius prolixus fifth-instar nymphs following a blood meal.
 
-# transcriptomics of the nervous system from Rhodnius prolixus, and its modulation after a blood meal in an immature stage
+# Transcriptomics of the nervous system from Rhodnius prolixus, and its modulation after a blood meal in an immature stage
 
 R code used to identify differentially expressed genes (DEGs) between fed and unfed insects in the manuscript:
 
