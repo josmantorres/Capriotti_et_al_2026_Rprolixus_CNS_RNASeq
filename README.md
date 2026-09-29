@@ -11,7 +11,7 @@ R code used to identify differentially expressed genes (DEGs) between fed and un
 
 ## Overview
 
-Gene-level counts generated with STAR (16,138 annotated genes) are analyzed with DESeq2. Genes with zero counts across all samples are excluded automatically by DESeq2 (14,992 genes tested). No additional gene-filtering step is applied.
+We analyze gene-level counts generated with STAR (16,138 annotated genes) using DESeq2. Genes with zero counts across all samples are excluded automatically by DESeq2 (14,992 genes tested). No additional gene-filtering step is applied.
 
 - **Contrast:** Fed vs Unfed (reference level = Unfed). Positive log2 fold changes indicate higher expression in Fed.
 - **Model:** negative binomial GLM, `~ treatment`, Wald test against |log2FC| > 1 (`lfcThreshold = 1`).
@@ -24,11 +24,12 @@ Gene-level counts generated with STAR (16,138 annotated genes) are analyzed with
 
 ```
 .
-├── DESeq2_DE_analysis_Fed_vs_Unfed.R   # analysis script
+├── Differential_expression_analysis.R   # analysis script
 ├── input/
-│   ├── counts_table.txt                # raw counts (see format below)
-│   └── sample_metadata.txt             # sample information
+│   ├── Raw_count_table.txt                # raw counts (see format below)
+│   └── Experiment_description.txt             # sample information
 ├── output/                             # created when the script is run
+│   ├── Deseq2_statistics.txt                # Differential expression analysis output
 └── README.md
 ```
 
@@ -65,10 +66,10 @@ Both files are tab-delimited with a header row.
 From the repository folder:
 
 ```bash
-Rscript DESeq2_DE_analysis_Fed_vs_Unfed.R
+Rscript Differential_expression_analysis.R
 ```
 
-or open the script in RStudio and run it. Paths, thresholds and the decimal separator are set in the "Parameters" section at the top of the script.
+or open the script in RStudio and run it. Paths, thresholds, and the decimal separator are set in the "Parameters" section at the top of the script.
 
 ## Outputs (written to `output/`)
 
@@ -91,7 +92,7 @@ or open the script in RStudio and run it. Paths, thresholds and the decimal sepa
 
 If you use this code, please cite the manuscript above and the archived version of this repository:
 
-> [Authors]. [Repository title]. Zenodo. [Year]. https://doi.org/[ZENODO-DOI]
+> [Natalia Capriotti; Lucila Traverso; Jose Manuel Latorre Estivalis; Ivana Sierra; Juan P. Ianowski; Sheila Ons]. [Capriotti_et_al_2026_Rprolixus_CNS_RNASeq]. Zenodo. [Year]. https://doi.org/[ZENODO-DOI]
 
 DESeq2: Love MI, Huber W, Anders S (2014). Genome Biology 15:550.
 apeglm: Zhu A, Ibrahim JG, Love MI (2019). Bioinformatics 35:2084–2092.
@@ -102,4 +103,4 @@ apeglm: Zhu A, Ibrahim JG, Love MI (2019). Bioinformatics 35:2084–2092.
 
 ## Contact
 
-[Name, institution, e-mail]
+[Jose Manuel Latorre Estivalis, IBBEA - CONICET UBA, jmlatorre@conicet.gov.ar]
