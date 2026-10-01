@@ -31,6 +31,9 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 │   └── Experiment_description.txt             # sample information
 ├── output/                             # created when the script is run
 │   ├── Deseq2_statistics.txt                # Differential expression analysis output
+│   ├── GSR_Biological_Process.txt                # GO-enrichment output for Biological process
+│   ├── GSR_Molecular_Function.txt                # GO-enrichment output for Molecular Function
+│   ├── GSR_Cellular_Component.txt                # GO-enrichment output for Cellular Component
 └── README.md
 ```
 
