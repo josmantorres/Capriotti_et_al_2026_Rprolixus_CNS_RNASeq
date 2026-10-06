@@ -24,8 +24,9 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 
 ```
 .
-├── Read trimming code with Trimmomatic and mapping/counting code with STAR   # analysis script
-├── Differential_expression_analysis.R   # analysis script
+├── script/
+    ├── Read trimming code with Trimmomatic and mapping/counting code with STAR   # analysis script
+    ├── Differential_expression_analysis.R   # analysis script
 ├── input/
 │   ├── Raw_count_table.txt                # raw counts (see format below)
 │   └── Experiment_description.txt             # sample information
@@ -79,18 +80,16 @@ or open the script in RStudio and run it. Paths, thresholds, and the decimal sep
 
 | File | Description |
 |------|-------------|
-| `DESeq2_results_all_genes.txt` | All tested genes: baseMean, shrunken log2FoldChange, lfcSE, s-value, Wald p-value and adjusted p-value (both against the |log2FC| > 1 threshold) |
-| `DEGs_Fed_vs_Unfed.txt` | DEGs (s-value < 0.05), with regulation direction |
-| `MAplot_Fed_vs_Unfed.tif` | MA plot |
+| `Deseq2_statistics.txt` | All tested genes: baseMean, shrunken log2FoldChange, lfcSE, s-value, Wald p-value and adjusted p-value (both against the |log2FC| > 1 threshold) |
+| `GO_enrichment_BP.txt` | GO-term enrichment analysis output for biological process |
+| `GO_enrichment_CC.txt` | GO-term enrichment analysis output for cellular component |
+| `GO_enrichment_MF.txt` | GO-term enrichment analysis output for molecular function |
 | `rlog_values.txt` | rlog-transformed expression values |
-| `Sample_distance_heatmap.tif` | Sample-to-sample distance heatmap |
-| `PCA_rlog.tif` | PCA plot |
-| `sessionInfo.txt` | Software versions used |
 
 ## Data availability
 
 - Raw sequencing data: [repository and accession number, e.g., NCBI SRA/GEO: XXXX]
-- Count table used in this analysis: [included in `input/` / deposited at XXXX]
+- Count table used in this analysis: Raw_count_table.txt
 
 ## Citation
 
