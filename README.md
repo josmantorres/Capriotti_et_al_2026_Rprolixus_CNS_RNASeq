@@ -27,6 +27,7 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 ├── script/
     ├── Read trimming code with Trimmomatic and mapping/counting code with STAR   # analysis script
     ├── Differential_expression_analysis.R   # analysis script
+    ├── 01_GO_enrichment_analysisi_Feeding_effect_13hafeter.R   # analysis script for GO-enrichment
 ├── input/
 │   ├── Raw_count_table.txt                # raw counts (see format below)
 │   └── Experiment_description.txt             # sample information
