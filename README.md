@@ -99,7 +99,7 @@ or open the script in RStudio and run it. Paths, thresholds, and the decimal sep
 
 If you use this code, please cite the manuscript above and the archived version of this repository:
 
-> Natalia Capriotti; Lucila Traverso; Jose Manuel Latorre Estivalis; Ivana Sierra; Juan P. Ianowski; Sheila Ons]. [Capriotti_et_al_2026_Rprolixus_CNS_RNASeq]. Zenodo. [Year]. https://doi.org/[ZENODO-DOI
+> Natalia Capriotti; Lucila Traverso; Jose Manuel Latorre Estivalis; Ivana Sierra; Juan P. Ianowski; Sheila Ons. Genomics and transcriptomics of nervous system from Rhodnius prolixus, and its modulation after a blood meal in an immature stage. Zenodo. [Year]. https://doi.org/[ZENODO-DOI
 
 DESeq2: Love MI, Huber W, Anders S (2014). Genome Biology 15:550.
 apeglm: Zhu A, Ibrahim JG, Love MI (2019). Bioinformatics 35:2084–2092.
