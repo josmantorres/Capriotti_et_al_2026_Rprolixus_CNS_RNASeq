@@ -27,7 +27,7 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 ├── script/
     ├── Read trimming code with Trimmomatic and mapping/counting code with STAR   # analysis script
     ├── Differential_expression_analysis.R   # analysis script
-    ├── 01_GO_enrichment_analysisi_Feeding_effect_13hafeter.R   # analysis script for GO-enrichment
+    ├── 01_GO_enrichment_analysis.R   # analysis script for GO-enrichment
 ├── input/
 │   ├── Raw_count_table.txt                # raw counts (see format below)
 │   └── Experiment_description.txt             # sample information
@@ -36,6 +36,8 @@ We analyze gene-level counts generated with STAR (16,138 annotated genes) using 
 │   ├── GSR_Biological_Process.txt                # GO-enrichment output for Biological process
 │   ├── GSR_Molecular_Function.txt                # GO-enrichment output for Molecular Function
 │   ├── GSR_Cellular_Component.txt                # GO-enrichment output for Cellular Component
+│   ├── Rlog_values_Table.txt                
+│   ├── TPM_Table.txt                
 └── README.md
 ```
 
@@ -85,7 +87,8 @@ or open the script in RStudio and run it. Paths, thresholds, and the decimal sep
 | `GO_enrichment_BP.txt` | GO-term enrichment analysis output for biological process |
 | `GO_enrichment_CC.txt` | GO-term enrichment analysis output for cellular component |
 | `GO_enrichment_MF.txt` | GO-term enrichment analysis output for molecular function |
-| `rlog_values.txt` | rlog-transformed expression values |
+| `Rlog_values_Table.txt` | rlog-transformed expression values |
+| `TPM_Table.txt` | Transcript per Million values |
 
 ## Data availability
 
